@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+gunicorn
+python-dotenv
+azure-storage-blob
+azure-storage-queue
+pydantic

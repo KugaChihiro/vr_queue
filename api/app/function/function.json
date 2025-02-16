@@ -1,0 +1,12 @@
+{
+    "scriptFile": "../queue_trigger.py",
+    "bindings": [
+      {
+        "name": "msg",
+        "type": "queueTrigger",
+        "direction": "in",
+        "queueName": "queue-vr-dev-020",
+        "connection": "AzureWebJobsStorage"
+      }
+    ]
+  }

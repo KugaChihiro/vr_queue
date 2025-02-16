@@ -1,6 +1,13 @@
 # 議事録作成ツール
 本ツールは、キャプチャーされた会議録画を音声解析し、効率的な議事録作成をサポートするツールです。<br>
-mp4あるいはwav形式の音声データをアップロードするだけで、自動的に文字起こしを行い、要約やフォーマット整形された議事録を生成します。　
+mp4あるいはwav形式の音声データをアップロードするだけで、自動的に文字起こしを行い、要約やフォーマット整形された議事録を生成します。
+
+# バックエンドの改定版
+こちらのコードはバックエンドの改訂版になります。<br>
+フロントエンド　→　HTTPリクエストを送信　→　AzureAppService<br>
+AzureAppService →　queueにメッセージを追加　→　AzureFunctions（queueトリガ-／Container環境にデプロイ<br>
+AzureAppService = ルートディレクトリ・queueTriger <br>
+AzureFunctions  = ルートディレクトリ・api/app
 
 ## 主な機能
 - **音声文字起こし**: Azure Speech Serviceで音声ファイルを文字起こしをします。
